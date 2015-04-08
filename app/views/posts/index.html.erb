@@ -17,6 +17,13 @@
       
           <!--<button type="submit">BUSCAR</button>-->
           <button type="submit" class="btn btn-sm btn-primary">BUSCAR</button>
+          <form class="navbar-form navbar-left" role="search">
+          
+        
+              <input type="text" class="form-control" placeholder="Buscar por Categoria"name="q" <%= @q %>>
+      
+          <!--<button type="submit">BUSCAR</button>-->
+          <button type="submit" class="btn btn-sm btn-primary">BUSCAR</button>
 
         </form>
         <br>
@@ -27,12 +34,15 @@
         <table class="table table-condensed">
           <thead>
             <tr>
+            
               <th>ID</th>
               <th>Titulo</th>
               <th>Articulo</th>
+              <th>Category</th>
+              <th>Usuario</th>
               <th>Like</th>
               <th>Fecha Creacion</th>
-              <th colspan="5"></th>
+              <th colspan="7"></th>
             </tr>
           </thead>
 
@@ -40,9 +50,12 @@
 
             <% @posts.each do |post| %>
               <tr>
+
                 <td><%= post.id%></td>
                 <td><%= post.titulo %></td>
                 <td><%= post.articulo %></td>
+                <td><%= post.category %></td>
+                <td><%= post.user_id %></td>
                 <td><%= post.like %></td>
                 <td><%= post.created_at %></td>
                 <td><%= link_to 'Ver', post %></td>

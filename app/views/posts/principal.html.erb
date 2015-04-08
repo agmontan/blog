@@ -83,9 +83,11 @@
       <th>ID</th>
       <th>Titulo</th>
       <th>Articulo</th>
+       <th>category</th>
       <th>Like</th>
-     
-      <th colspan="6"></th>
+    
+
+      <th colspan="7"></th>
     </tr>
   </thead>
 
@@ -95,6 +97,7 @@
         <td><%= post.id%></td>
         <td><%= post.titulo %></td>
         <td><%= post.articulo %></td>
+        <td><%= post.category %></td>
         
         <td><%= post.like %></td>
         <td><a href="/posts/like/<%= post.id%>">like</a></td>

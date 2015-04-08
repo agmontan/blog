@@ -9,6 +9,7 @@ class PostsController < ApplicationController
       aux= @q.to_s
 
       @posts = Post.where("articulo LIKE '%#{aux}%'").order("created_at DESC")
+      @posts = Post.where("category LIKE '%#{aux}%'").order("created_at DESC")
       #@posts = Post.where(:title => @q)
     else
       @posts = Post.order("created_at DESC")
@@ -103,6 +104,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:titulo, :articulo, :like)
+      params.require(:post).permit(:titulo, :articulo, :like, :category, :user_id)
     end
 end
