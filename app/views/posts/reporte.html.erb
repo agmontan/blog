@@ -1,0 +1,44 @@
+<h1>Reporte</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titulo</th>
+    
+      
+      <th>Fecha de Creacion</th>
+      <th>Fecha de Modificacion</th>
+      <th>palabras en el Articulo</th>
+      <th>Comentarios</th>
+      <th>Likes</th>
+     
+      <th colspan="7"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.id%></td>
+        <td><%= post.titulo %></td>
+        <td><%= post.created_at %></td>
+        <td><%= post.updated_at%></td>
+        <td><%= post.articulo.split(' ').length%></td>
+        <td><%= post.reviews.length%></td>
+        <td><%= post.like %></td>
+        
+       
+        
+      </tr>
+
+
+
+    <% end %>
+
+  </tbody>
+</table>
+
+
+
+
+

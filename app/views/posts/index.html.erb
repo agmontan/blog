@@ -1,0 +1,60 @@
+
+
+<html>
+<head>
+  <title>administrativo</title>
+  <link rel="stylesheet" type="text/css" href="blogForms.css">
+
+</head>
+
+
+        <body>
+        <h1>Administrativo</h1>
+        <form class="navbar-form navbar-left" role="search">
+          
+        
+              <input type="text" class="form-control" placeholder="Buscar"name="q" <%= @q %>>
+      
+          <!--<button type="submit">BUSCAR</button>-->
+          <button type="submit" class="btn btn-sm btn-primary">BUSCAR</button>
+
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Titulo</th>
+              <th>Articulo</th>
+              <th>Like</th>
+              <th>Fecha Creacion</th>
+              <th colspan="5"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <% @posts.each do |post| %>
+              <tr>
+                <td><%= post.id%></td>
+                <td><%= post.titulo %></td>
+                <td><%= post.articulo %></td>
+                <td><%= post.like %></td>
+                <td><%= post.created_at %></td>
+                <td><%= link_to 'Ver', post %></td>
+                <td><%= link_to 'Editar', edit_post_path(post) %></td>
+                <td><%= link_to 'Borrar', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+
+</body>
+ <button  class="btn btn-sm btn-primary"><%= link_to 'New Post', new_post_path %></button>
+</html>

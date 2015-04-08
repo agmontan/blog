@@ -1,0 +1,109 @@
+
+
+
+#bloque{
+	height: 500px;
+	width: 1300px;
+	margin: none;
+}
+
+#fondo{
+	height: 100%;
+	width: 100%;
+	background-color: lightblue;
+
+	float:center;
+}
+#arriba{
+	margin-left: none;
+	margin-right: none;
+	margin-top: -10px;
+	height: 20%;
+	width: 100%;
+	background-color: lightblue;
+	position: fixed;
+	
+	
+	
+}
+#abajo{
+	height: 20%;
+	width: 100%;
+	background-color: yellow;
+	
+}
+#imagen{
+	margin-top: -80px;
+	margin-left: -10px;
+	height: 100%;
+	width: 18%;
+	
+	float:left;
+	
+}
+#izquierda{
+	margin-left: -10px;
+	margin-top: 120px;
+	height: 200%;
+	width: 20%;
+	background-color: red;
+	float:left;
+	position: fixed;
+}
+#derecha{
+	margin-top: 90px;
+	margin-left: 200px;
+	height: 200%;
+	width: 20%;
+	
+	float:right;
+}
+#texto{
+	height: 100%;
+	width: 100%;
+	background: url("html5.jpg") no-repeat;
+
+	float:center;
+}
+
+
+iframe{
+ margin-top: -380px;
+ margin-left: 190px;
+ margin-right: 300px;
+ height: 80%;
+ width: 100%;
+ outline:none;
+ 
+}
+
+
+#body{
+	margin-top: 100px;
+	margin-left: 40px;
+}
+
+#margintable{
+
+	margin-top: 80px;
+
+
+}
+#margincarousel{
+
+	margin-top: -49px;
+	margin-left: -40px;
+
+
+}
+
+#marginarticulo{
+	margin-left: -20px;
+
+}
+
+#tableabajo
+{
+	margin-bottom: 40px;
+
+}

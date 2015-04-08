@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+
+  <strong><h1><%= @post.titulo %>:</h1></strong>
+  
+
+
+
+
+
+
+ <div id="marginarticulo" class="jumbotron">
+        
+        <p><%= @post.articulo %></p>
+      </div>
+
+<p>
+  <strong>Like:</strong>
+  <%= @post.like %>
+</p>
+
+
+
+
+<button type="button" class="btn btn-primary"><a href="/posts/like/<%=@post.id%>">like</a> </button><button type="button" class="btn btn-danger"><a href="/posts/dislike/<%=@post.id%>"> dislike</a></button>
+<h1>Comentarios:</h1>
+<div class="col-md-6" id="tableabajo">
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th>Comentario</th>
+      <th>Like</th>
+      <th colspan="3"></th>
+       </tr>
+  </thead>
+  <tbody>
+	<%@post.reviews.each do |coment|%>
+	<td><%= coment.comentario%></td>
+	<td><%= coment.like%></td>
+	<td><a href="/reviews/like/<%=coment.id%>">like</a></td>
+	 </tr>
+
+
+
+    <% end %>
+
+  </tbody>
+</table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	
+		<form class="form-inline" role="form"  action="/reviews" method="post" accept-charset="UTF-8">
+		<input type="hidden" name="review[post_id]" value="<%=@post.id%>">
+		<textarea name="review[comentario]">
+		</textarea>
+		<br>
+		<input type="submit"> 
+		</form>
+
+
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
